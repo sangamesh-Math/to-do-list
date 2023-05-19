@@ -1,25 +1,21 @@
 
 import './App.css';
-
 function App() {
-  // const name = <h1>Hello, Sangamesh</h1>;
-  const name = [{nam: "sangamesh" ,age: 18},{nam: "sagar" ,age: 21}, {nam: "suraj" ,age: 23},];
-  return (<div>
-    {name.map((user, key) => {
-      return <User name = {user.nam} age = {user.age}/>
-    
-})}
-    </div>
-  );
-  
-}
-const User = (props) =>
-  {
-    return (
+ 
+  const planets = [{name: "earth", gasplanet: false}, {name: "uranus", gasplanet: true}, {name: "Saturn", gasplanet: false}, {name: "pluto", gasplanet: true}];
+  return (
     <div>
-      <h2 style={{color: "red"}}>{props.name} {props.age}</h2>
-    </div> );
-  };
+    {planets.map((planet, key) => {
+     if(planet.gasplanet)
+      return <h1>{planet.name}</h1>;
+      
+      
+    })}
+     </div> 
+    );
+  }
+
+
 
 
 export default App;
