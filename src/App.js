@@ -1,18 +1,15 @@
-
+import {useState} from 'react';
 import './App.css';
 function App() {
- 
-  const planets = [{name: "earth", gasplanet: false}, {name: "uranus", gasplanet: true}, {name: "Saturn", gasplanet: false}, {name: "pluto", gasplanet: true}];
-  return (
-    <div>
-    {planets.map((planet, key) => {
-     if(planet.gasplanet)
-      return <h1>{planet.name}</h1>;
-      
-      
-    })}
-     </div> 
-    );
+  const [age, setAge] = useState(5);
+  
+  const increaseAge = () => {
+  // age = age + 1;
+  setAge(age+5);
+  }
+
+ return (<div>{age}<button onClick={increaseAge}>Increment</button></div>);
+
   }
 
 
