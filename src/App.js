@@ -13,6 +13,7 @@ function App() {
       fontSize: '16px',
       margin : '10px'
     };
+  
     const buttonSt = {
       backgroundColor: 'red',
       color: 'black',
